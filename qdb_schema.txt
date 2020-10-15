@@ -1,0 +1,45 @@
+https://app.quickdatabasediagrams.com/#/
+
+circuits
+--
+circuitId INT PK
+circuitRef VARCHAR
+name VARCHAR
+location VARCHAR
+country VARCHAR
+lat DECIMAL
+lng DECIMAL
+
+drivers
+--
+driverId INT PK
+driverRef VARCHAR
+code VARCHAR
+forename VARCHAR
+surname VARCHAR
+dob DATE
+nationality VARCHAR
+
+races
+--
+raceId INT PK
+year INT
+round INT
+circuitId INT FK >- circuits.circuitId
+name VARCHAR
+date DATE
+
+results
+--
+resultId INT PK
+raceId INT FK >- races.raceId
+driverId INT FK >- drivers.driverId
+grid INT
+position INT
+points INT
+laps INT
+time VARCHAR
+milliseconds VARCHAR 
+fastestLap VARCHAR
+fastestLapTime VARCHAR 
+fastestLapSpeed VARCHAR
