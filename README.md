@@ -154,4 +154,4 @@ REFERENCES "races" ("raceId");
 <sub><sup>[Go back to the table of contents](#toc)</sub></sup>
 <br>
 
-[![Jupyter Notebook](social_icons/clickherejn.png)](https://github.com/matheusgratz/etl-project)
+[![Jupyter Notebook](social_icons/clickherejn.png)](https://github.com/matheusgratz/etl-project/blob/main/f1_etc.ipynb)
