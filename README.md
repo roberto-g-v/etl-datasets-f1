@@ -7,9 +7,43 @@
 ---
 Table of contents <a name="toc"></a>
 
-1. [ERD](#erd)
-2. [postgreSQL Statatements](#psql)
-3. [Jupyter Notebook File](#jnb)
+1. [Kaggle Dataset](#kaggle)
+2. [ERD](#erd)
+3. [postgreSQL Statatements](#psql)
+4. [Jupyter Notebook File](#jnb)
+5. [Answers](#ans)
+
+---
+### The Dataset (Kaggle) <a name="kaggle"></a>
+
+We've used a Kaggle dataset to perform this task. In this case, we choose a [F1 race data from 1950 to 2020](https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020).
+
+The dataset has multiple files:
+* <span style="background-color:#D3D3D3">circuits.csv</span>
+* constructor_results.csv
+* constructor_standings.csv
+* constructors.csv
+* driver_standings.csv
+* <span style="background-color:#D3D3D3">drivers.csv</span>
+* lap_times.csv
+* pit_stops.csv
+* qualifying.csv
+* <span style="background-color:#D3D3D3">races.csv</span>
+* <span style="background-color:#D3D3D3">results.csv</span>
+* seasons.csv
+* status.csv
+
+From the 13 files, we've decided to use 4 files to define and execute the ETL process. Those files are highlighted in gray in the previous list presented.
+
+The data selection was based on the questions that we want to answer, as below:
+1. What's the distribution of drivers based on their nationality?
+Based on the nationality: 
+2. What's the distribution of winners?
+3. What's the distribution of 2nd places?
+4. What's the distribution of 3rd places?
+5. What's the distribution of podium appearances?
+
+Also, some columns either had a lot of NaN values or did not add any value to our analysis. In this case, we've decided to drop them.
 
 ---
 ### ERD <a name="erd"></a>
@@ -155,3 +189,98 @@ REFERENCES "races" ("raceId");
 <br>
 
 [![Jupyter Notebook](social_icons/clickherejn.png)](https://github.com/matheusgratz/etl-project/blob/main/f1_etc.ipynb)
+
+---
+### Answers <a name="ans"></a>
+
+1. What's the distribution of drivers based on their nationality - TOP10?
+<br>
+
+**nationality**|**Count**
+:-----:|:-----:
+British|162
+American|157
+Italian|99
+French|73
+German|49
+Brazilian|31
+Argentine|24
+South African|23
+Belgian|23
+Swiss|23
+
+<br>
+<br>
+Based on the nationality:
+<br>
+
+2. What's the distribution of winners - TOP10?
+<br>
+
+**nationality**|**count**
+:-----:|:-----:
+British|267
+German|173
+Brazilian|101
+French|79
+Finnish|49
+Italian|43
+Austrian|41
+Australian|40
+Argentine|38
+American|33
+
+<br>
+<br>
+
+3. What's the distribution of 2nd places - TOP10?
+<br>
+
+**nationality**|**2nd**
+:-----:|:-----:
+British|195
+German|117
+French|111
+Brazilian|103
+Italian|79
+Finnish|67
+American|41
+Austrian|40
+Spanish|39
+Australian|39
+
+<br>
+<br>
+4. What's the distribution of 3rd places - TOP10?
+<br>
+
+**nationality**|**3nd**
+:-----:|:-----:
+British|186
+French|113
+German|102
+Brazilian|89
+Italian|85
+Finnish|72
+American|55
+Australian|46
+Austrian|37
+New Zealander|36
+
+<br>
+<br>
+5. What's the distribution of podium appearances - TOP10?
+<br>
+
+**nationality**|**1st**|**2nd**|**3rd**|**Total**
+:-----:|:-----:|:-----:|:-----:|:-----:
+British|267|195|186|648
+German|173|117|102|392
+French|79|111|113|303
+Brazilian|101|103|89|293
+Italian|43|79|85|207
+Finnish|49|67|72|188
+American|33|41|55|129
+Australian|40|39|46|125
+Austrian|41|40|37|118
+Spanish|32|39|28|99
