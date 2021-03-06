@@ -284,3 +284,10 @@ American|33|41|55|129
 Australian|40|39|46|125
 Austrian|41|40|37|118
 Spanish|32|39|28|99
+
+_______________________________________________
+- Email: <roberto.gonzalez.vallejo@gmail.com>
+- Author: [Roberto Gonzalez Vallejo](mailto:roberto.gonzalez.vallejo@gmail.com)
+- [**Linkedin**](https://www.linkedin.com/in/roberto-gonzalez-vallejo-6ba894144/)
+- [**Github**](https://github.com/roberto-g-v)
+- © 2020
